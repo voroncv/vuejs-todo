@@ -23,7 +23,7 @@
         </div>
       </form>
 
-        <h1>All</h1>
+        <h1 v-if="posts.length > 0">All</h1>
           <div class="list-group">
             <a v-for="post in posts" href="#" class="list-group-item" >{{ post }}
               <span class="pull-right">
