@@ -2,17 +2,22 @@ new Vue({
   el: 'body',
   data: function() {
     return {
-      newPostsText: '',
+      postsText: '',
       posts: [
-        'First post',
-        'Second post'
+        'First pages',
+        'Second pages',
+        'Three pages'
       ]
     }
   },
   methods: {
-    addNewPosts: function () {
-      this.posts.push(this.newPostsText)
-      this.newPostsText = ''
+    newPosts: function () {
+      this.posts.push(this.postsText)
+      this.postsText = ''
+
+    },
+    removeElement : function (post) {
+      this.posts.$remove(post)
     }
   }
 })
